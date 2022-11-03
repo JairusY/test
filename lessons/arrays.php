@@ -85,8 +85,26 @@
         */
 
 
-
         /*
+        //Processing Indexed Arrays using foreach
+        $color = array("Red","Green","Blue");
+        foreach ($color as $key => $value) {
+            echo $value . '<br>';
+        }
+       
+       
+        for ($i=0; $i < count($color); $i++)
+            echo $color[$i] . '<br>';
+        // as much as possible please use foreach in arrays
+
+
+        //Processing Assosiative Arrays using foreach
+        $ages = array("Peter" => 22, "Clark" => 32, "John" => 28);
+        foreach ($ages as $key => $value) {
+            echo $key . ' is ' . $value . 'years old.<br>';
+        }
+        */
+
         $contacts = array(
             array(
                 'name' => 'Peter Parker', 
@@ -112,14 +130,26 @@
                 'sex' => 'Male'
             ), 
         );
-        var_dump($contacts);
-        print_r($contacts);
-        */
+        
+        // foreach ($contacts as $keyContact => $valueContact) {
+        //     foreach ($valueContact as $key => $value) {
+        //         echo '<b>' . strtoupper($key) . '</b>: ' . $value . '<br>';
+                
+        //     }
+        //     echo '<br>';
+        // }
 
-        $color = array("Red","Green","Blue");
+        // foreach ($contacts as $keyContact => $valueContact) {
+        //     foreach ($contacts[$keyContact] as $key => $value) {
+        //         echo '<b>' . strtoupper($key) . '</b>: ' . $value . '<br>';
+                
+        //     }
+        //     echo '<br>';
+        // }
 
-        foreach ($color as $key => $value) {
-            echo $value . '<br>';
+        foreach ($contacts as $keyContact => $valueContact) {
+            print_r($contacts[$keyContact]);
+            echo '<br>';
         }
 
         
