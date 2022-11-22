@@ -32,17 +32,27 @@
                     array(
                         'type' => 'Admin',
                         'username' => 'admin',
-                        'password' => 'pass123',
+                        'password' => 'admin',
+                    ),
+                    array(
+                        'type' => 'Admin',
+                        'username' => 'jairus',
+                        'password' => 'Pass1234',
                     ),
                     array(
                         'type' => 'Content Manager',
-                        'username' => 'jairus',
-                        'password' => 'yanga123',
+                        'username' => 'pepito',
+                        'password' => 'manaloto',
+                    ),
+                    array(
+                        'type' => 'Content Manager',
+                        'username' => 'pedro',
+                        'password' => 'penduko',
                     ),
                     array(
                         'type' => 'System User',
-                        'username' => 'admin',
-                        'password' => 'pass123',
+                        'username' => 'Juan',
+                        'password' => 'Tamad',
                     ),
                 );
                 // print_r($users);
@@ -98,6 +108,50 @@
                     elseif($status === $users[2]['type']) {
                         if ($name === $users[2]['username']) {
                             if ($pass === $users[2]['password']) {
+                                echo 
+                                '<div class="alert alert-success mt-3" role="alert">
+                                    Welcome: ' . $name . '
+                              </div>';
+                            }
+                            else{
+                                echo
+                                '<div class="alert alert-danger mt-3" role="alert">
+                                    Invalid Username/ Password
+                              </div>';
+                            }
+                        }
+                        else{
+                            echo
+                            '<div class="alert alert-danger mt-3" role="alert">
+                                    Invalid Username/ Password
+                              </div>';
+                        }
+                    }
+                    elseif($status === $users[3]['type']) {
+                        if ($name === $users[3]['username']) {
+                            if ($pass === $users[3]['password']) {
+                                echo 
+                                '<div class="alert alert-success mt-3" role="alert">
+                                    Welcome: ' . $name . '
+                              </div>';
+                            }
+                            else{
+                                echo
+                                '<div class="alert alert-danger mt-3" role="alert">
+                                    Invalid Username/ Password
+                              </div>';
+                            }
+                        }
+                        else{
+                            echo
+                            '<div class="alert alert-danger mt-3" role="alert">
+                                    Invalid Username/ Password
+                              </div>';
+                        }
+                    }
+                    elseif($status === $users[4]['type']) {
+                        if ($name === $users[4]['username']) {
+                            if ($pass === $users[4]['password']) {
                                 echo 
                                 '<div class="alert alert-success mt-3" role="alert">
                                     Welcome: ' . $name . '
