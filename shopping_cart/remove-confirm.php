@@ -3,12 +3,9 @@
     require_once('dataset.php');
 
     if(isset($_POST['btnProcess'])) {
-        // the best way to remove the selected item from the cart/session is to unset iterator_apply
-        // to do that we should call the proper elements in the session_destroy
-        // so with that the key and the size values should be supplied as index to our session cart items
+        
         unset($_SESSION['cartItems'][$_POST['hdnKey']][$_POST['hdnSize']]);
 
-        // then update the session total quantity buy subtracting the previous quantity of the deleted item from the total quantity
         $_SESSION['totalQuantity'] -= $_POST['hdnQuantity'];
         header("location: cart.php");
     }
