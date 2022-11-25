@@ -97,10 +97,15 @@
                                     </div>
                                     <div class="product-content">
                                         <h3 class="title">' . $arrProducts[$index]['name'] . ' <span class="badge badge-secondary">₱ ' . $arrProducts[$index]['price'] . '</span></h3>
-                                        <a class="add-to-cart" href="details.php?='.$index.'">+ Add To Cart</a>
+                                        <a class="add-to-cart" href="details.php?id='.$index.'">+ Add To Cart</a>
                                     </div>
                                 </div>
                             </div>';
+                            $_SESSION['productArr'][$index]['name'] = $arrProducts[$index]['name'];
+                            $_SESSION['productArr'][$index]['description'] = $arrProducts[$index]['description'];
+                            $_SESSION['productArr'][$index]['price'] = $arrProducts[$index]['price'];
+                            $_SESSION['productArr'][$index]['photo1'] = $arrProducts[$index]['photo1'];
+                            $_SESSION['productArr'][$index]['photo2'] = $arrProducts[$index]['photo2'];
                             }
                         }
                     ?>
